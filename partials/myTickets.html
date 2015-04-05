@@ -1,0 +1,26 @@
+<div blg-menu menu-title="AngularJS Blog"></div>
+<div id="container" class="uk-container">
+    <div class="uk-grid" data-uk-grid-margin>
+
+        <div class="uk-width-1-1">
+            <h1 class="uk-h3 title uk-width-1-1">My Tickets</h1>
+        </div>
+        
+        <div class="uk-width-1-1 uk-margin-top">
+            <table class="uk-table uk-table-striped">
+                <thead>
+                    <tr><th>id</th><th>Notified</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="ticket in tickets">
+                        <td><a href="#/ticket/{{ticket.id}}">{{ticket.id}}</a></td>
+                        <td><a href="#/ticket/{{ticket.id}}">{{ticket.notified}}</a></td>
+                        <td><a href="#/ticket/{{ticket.id}}"><div class="uk-badge uk-badge-notification {{helpers.badge(ticket.status)}}">{{ticket.status}}</div></a></td></tr>
+                </tbody>
+            </table>            
+        </div>
+
+
+    </div>
+</div>
+

@@ -1,30 +1,54 @@
 <div blg-menu menu-title="AngularJS Blog"></div>
 <div id="container" class="uk-container">
-    <div class="uk-grid">
+    <div class="uk-grid" data-uk-grid-margin>
 
-        <form class="uk-form uk-form-stacked uk-width-1-1">
+        <div class="uk-width-1-1">
+            <h1 class="uk-h3 title uk-width-1-1">New Ticket</h1>
+        </div>
+        
+        <form class="uk-form uk-form-stacked uk-width-1-1 uk-margin-top">
             <fieldset>
-                <legend>New Ticket</legend>
                 <div class="uk-form-row uk-width-1-1 uk-top-margin">
-                    <label class="uk-form-label">Who needs help</label>
-                    <select class="uk-width-1-1">
-                        <option>Ignasi Puchades</option>
-                        <option>Jordi Almirall</option>
-                        <option>Pere Pagès</option>                     
+                    <label class="uk-form-label"><i class='uk-icon-user'></i> Who needs help<span style="color:red">*</span></label>
+                    <select required class="uk-width-1-1 uk-form-large">
+                        <option value=''>Who needs help</option>
+                        <option value='1'>Ignasi Puchades</option>
+                        <option value='2'>Jordi Almirall</option>
+                        <option value='3'>Pere Pagès</option>                     
                     </select>
 
                 </div>
                 <div class="uk-form-row">
-                    <label class="uk-form-label">Issue</label>
-                    <div class="uk-form-controls">
-                        <label><input name="issue" type="radio" /> Emails on Outlook</label><br/>
-                        <label><input name="issue" type="radio" /> MS Office</label><br/>
-                        <label><input name="issue" type="radio" /> Network problem</label><br/>
-                        <label><input name="issue" type="radio" /> Phone configuration</label><br/>
-                        <label><input name="issue" type="radio" /> Replace toner</label><br/>
-                        <label><input name="issue" type="radio" /> Other</label><br/>
-                    </div>
+                    <label class="uk-form-label"><i class='uk-icon-support'></i> Issue<span style="color:red">*</span></label>
+                    <select ng-model="issue" required name="issue" class="uk-width-1-1 uk-form-large">
+                        <option value=''>Issue</option>
+                        <option value='1'>Emails on Outlook</option>
+                        <option value='2'>MS Office</option>
+                        <option value='3'>Network problem</option>
+                        <option value='4'>Phone configuration</option>
+                        <option value='5'>Replace toner</option>
+                        <option value='6'>Other</option>
+                    </select>
                 </div>
+
+                <div ng-show="issue === '6'" class="uk-form-row uk-width-1-1">
+                    <label class="uk-form-label">Other<span style="color:red">*</span></label>
+                    <input type="text" class='uk-form-large uk-width-1-1' ng-required="issue === '6'"/>
+                </div>
+
+                <div class='uk-form-row uk-width-1-1'>
+                    <label class="uk-form-label" ><i class="uk-icon-comment-o"></i> Description (Optional)</label>
+                    <textarea class="uk-width-1-1"></textarea>
+                </div>
+                
+                <div class="uk-width-1-1 uk-margin-top">
+                    <span style="color:red">*</span> <i>Indicates required field</i>
+                </div>
+                
+                <div class="uk-form-row uk-margin-top">
+                    <button class="uk-button uk-button-large">Submit</button>
+                </div>
+                
             </fieldset>
         </form>
 
