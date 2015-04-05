@@ -3,15 +3,15 @@
 
 var blogApp = angular.module('blogApp', [
     'ngRoute',
-    'blogControllers',
+    'ticketsControllers',
     'blogDirectives'
 ]);
 
 blogApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
         $routeProvider.
                 when('/', {
-                    templateUrl: 'partials/main.html',
-                    controller: 'BlogCtrl'
+                    templateUrl: 'partials/newTicket.html',
+                    controller: 'NewTicketCtrl'
                 }).
                 when('/blogPost/:id', {
                     templateUrl: 'partials/blogPost.html',

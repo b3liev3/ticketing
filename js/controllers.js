@@ -21,14 +21,15 @@ var fakeBlogs = [{
     }
 ];
 
-var blogControllers =
-        angular.module('blogControllers', []);
+var ticketsControllers =
+        angular.module('ticketsControllers', []);
 
-blogControllers.controller('BlogCtrl', ['$scope',
-    function BlogCtrl($scope) {
-        $scope.blogList = fakeBlogs;
+ticketsControllers.controller('NewTicketCtrl', ['$scope',
+    function NewTicketCtrl($scope) {
+        $scope.test = 'hello!!';
     }]);
 
+/*
 blogControllers.controller('BlogViewCtrl',
         ['$scope', '$routeParams',
             function BlogViewCtrl($scope, $routeParams) {
@@ -38,3 +39,4 @@ blogControllers.controller('BlogViewCtrl',
                 $scope.blogEntry = fakeBlogs[blogId];
             }
         ]);
+        */
