@@ -5,11 +5,46 @@
         <div class="uk-width-1-1">
             <h1 class="uk-h3 title uk-width-1-1">Ticket {{ticket.id}}</h1>
         </div>
-        
+
         <div class="uk-width-1-1 uk-margin-top">
             <h2><div class="uk-badge uk-badge-notification {{helpers.badge(ticket.status)}}">{{ticket.status}}</div> {{ticket.category}}</h2>
         </div>
-
         
+        <div class="uk-width-1-1 uk-margin-top">
+            <div class="uk-grid">
+                <div class="uk-width-1-2">
+                    <h3><i class="uk-icon-wrench"></i></h3>
+                    <dl>
+                        <dt>Assigned to</dt>
+                        <dd>NA</dd>
+                        <dt>ETC</dt>
+                        <dd><div class="uk-badge uk-badge-danger">Indefinite</div></dd>
+                    </dl>
+                </div>
+                <div class="uk-width-1-2">
+                    <dl>
+                        <h3><i class="uk-icon-clock-o"></i></h3>
+                        <dt>Notified</dt>
+                        <dd>{{ticket.notified}}</dd>
+                        <dt>Closed</dt>
+                        <dd>NA</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-width-1-1 uk-margin-top">
+            <div class="uk-panel uk-panel-box">
+                <h3><i class="uk-icon-user"></i> User Issue Description</h3>
+                <p><i class="uk-icon-comment-o"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac sollicitudin diam, eu sollicitudin enim. </p>
+            </div>
+        </div>
+
+        <div class="uk-width-1-1 uk-margin-top">
+            <div class="uk-panel uk-panel-box uk-panel-box-primary">
+                <h3><i class="uk-icon-wrench"></i> IT</h3>
+                <p><i class="uk-icon-comment-o"></i> Pellentesque interdum est eget ante feugiat facilisis. Proin consectetur ligula id consequat iaculis. </p>
+            </div>
+        </div>
     </div>
 </div>
