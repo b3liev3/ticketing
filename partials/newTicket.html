@@ -36,6 +36,35 @@
                     <input type="text" class='uk-form-large uk-width-1-1' ng-required="issue === '6'"/>
                 </div>
 
+                <button id="camera" class="uk-button uk-button-large"><i class="uk-icon-camera"></i></button>
+
+                <input id="myFileInput" type="file" accept="image/*;capture=camera" style="display:none">
+                <script>
+                    
+                    $("#camera").click(function () {
+    $("#myFileInput").trigger('click');
+    
+});
+$("#myFileInput").change(function (){
+if($('#myFileInput').val().length !== 0){
+         $("#myFileInput").show();
+    }else{
+        $("#myFileInput").hide();
+    }    
+});
+
+var myInput = document.getElementById('myFileInput');
+
+function sendPic() {
+    var file = myInput.files[0];
+
+    // Send file here either by adding it to a `FormData` object 
+    // and sending that via XHR, or by simply passing the file into 
+    // the `send` method of an XHR instance.
+}
+
+myInput.addEventListener('change', sendPic, false);
+                </script>
                 <div class='uk-form-row uk-width-1-1'>
                     <label class="uk-form-label" ><i class="uk-icon-comment-o"></i> Description (Optional)</label>
                     <textarea class="uk-width-1-1"></textarea>
