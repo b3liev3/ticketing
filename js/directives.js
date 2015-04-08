@@ -19,3 +19,19 @@ var blogDirectives =
                 }
             }
         });
+        
+        blogDirectives.directive('itMenu', function (){
+            return {
+                restrict: 'A',
+                templateUrl: 'partials/itMenu.html',
+                link: function (scope, el, attrs){
+                    console.log(attrs.currentPage);
+                if(attrs.currentPage === 'new'){
+                    scope.new = "uk-active";
+                }else if(attrs.currentPage === 'my-tickets'){
+                    scope.myTickets = "uk-active";
+                }
+                
+                }
+            }
+        });
