@@ -36,9 +36,11 @@
                     <input type="text" class='uk-form-large uk-width-1-1' ng-required="issue === '6'"/>
                 </div>
 
-                <button id="camera" class="uk-button uk-button-large"><i class="uk-icon-camera"></i></button>
-
-                <input id="myFileInput" type="file" accept="image/*;capture=camera" style="display:none">
+                <div class="uk-form-row uk-width-1-1">
+                        <label class="uk-form-label">Picture (Optional)</label>
+                        <button id="camera" class="uk-button uk-button-large"><i class="uk-icon-camera"></i></button>
+                        <input id="myFileInput" type="file" accept="image/*;capture=camera" style="display:none">
+                </div>
                 <script>
                     
                     $("#camera").click(function () {
@@ -47,10 +49,7 @@
 });
 $("#myFileInput").change(function (){
 if($('#myFileInput').val().length !== 0){
-         $("#myFileInput").show();
-    }else{
-        $("#myFileInput").hide();
-    }    
+    console.log($('#myFileInput').val());
 });
 
 var myInput = document.getElementById('myFileInput');
@@ -65,7 +64,8 @@ function sendPic() {
 
 myInput.addEventListener('change', sendPic, false);
                 </script>
-                <div class='uk-form-row uk-width-1-1'>
+                
+                <div class='uk-form-row uk-width-1-1 uk-margin-top'>
                     <label class="uk-form-label" ><i class="uk-icon-comment-o"></i> Description (Optional)</label>
                     <textarea class="uk-width-1-1"></textarea>
                 </div>
