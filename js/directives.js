@@ -9,7 +9,13 @@ var blogDirectives =
                 restrict: 'A',
                 templateUrl: 'partials/menu.html',
                 link: function (scope, el, attrs){
-                scope.label = attrs.menuTitle;
+                    console.log(attrs.currentPage);
+                if(attrs.currentPage === 'new'){
+                    scope.new = "uk-active";
+                }else if(attrs.currentPage === 'my-tickets'){
+                    scope.myTickets = "uk-active";
+                }
+                
                 }
             }
         });
