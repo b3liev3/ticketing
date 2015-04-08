@@ -31,5 +31,15 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
                 when('/ticket/:id', {
                     templateUrl: 'partials/ticket.html',
                     controller: 'TicketCtrl'
+                }).
+                when('/mockups',{
+                    templateUrl: 'mockup/index.html',
+                    controller: 'MockupsCtrl'
+                }).
+                when('/ticket-without',{
+                    templateUrl: 'mockup/ticketWithout.html'
+                }).
+                when('/it-ticket',{
+                    templateUrl: 'mockup/itTicket.html'
                 });
     }]);

@@ -2,24 +2,61 @@
 <div id="container" class="uk-container">
     <div class="uk-grid" data-uk-grid-margin>
 
-        <div class="uk-width-1-1">
+        <!--div class="uk-width-1-1">
             <h1 class="uk-h3 title uk-width-1-1">My Tickets</h1>
-        </div>
+        </div-->
         
         <div class="uk-width-1-1 uk-margin-top">
             <table class="uk-table uk-table-striped">
                 <thead>
-                    <tr><th>id</th><th>Notified</th><th>Status</th></tr>
+                    <tr><th colspan="4"><div class="uk-badge uk-badge-notification uk-badge-success">OPEN</div> Current Open Tickets</th></tr>
+            <tr><th>Notified</th><th>Category</th><th>Activity</th></tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="ticket in tickets">
-                        <td><a href="#/ticket/{{ticket.id}}">{{ticket.id}}</a></td>
-                        <td><a href="#/ticket/{{ticket.id}}">{{ticket.notified}}</a></td>
-                        <td><a href="#/ticket/{{ticket.id}}"><div class="uk-badge uk-badge-notification {{helpers.badge(ticket.status)}}">{{ticket.status}}</div></a></td></tr>
+                    <tr>
+                        <td><a href="#/ticket/11802">2015-04-06</a></td>
+                        <td><a href="#/ticket/11802">Phone configuration</a></td>
+                        <td><a href="#/ticket/11802"><i class="uk-icon-wrench"></i> Assigned</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#/ticket/11146">2015-03-31</a></td>
+                        <td><a href="#/ticket/11146">MS Office</a></td>
+                        <td><a href="#/ticket/11146"><i class="uk-icon-comment-o"></i> Comment</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#/ticket/11433">2015-01-23</a></td>
+                        <td><a href="#/ticket/11433">Replace toner</a></td>
+                        <td><a href="#/ticket/11433"><i class="uk-icon-clock-o"></i> ETC </a></td>
+                    </tr>
                 </tbody>
             </table>            
         </div>
 
+        <div class="uk-width-1-1 uk-margin-top">
+            <table class="uk-table uk-table-striped">
+                <thead>
+                    <tr><th colspan="3"><div class="uk-badge uk-badge-notification uk-badge-danger">CLOSED</div> Recently Closed Tickets</th></tr>
+                    <tr><th>Closed</th><th>Category</th><th>Satisfaction</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#/ticket/11802">2015-04-07</a></td>
+                        <td><a href="#/ticket/11802">Replace toner</a></td>
+                        <td><a href="#/ticket/11802"><i class="uk-icon-star"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#/ticket/11146">2015-02-31</a></td>
+                        <td><a href="#/ticket/11146">MS Office</a></td>
+                        <td><a href="#/ticket/11146">NA</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#/ticket/11433">2015-02-23</a></td>
+                        <td><a href="#/ticket/11433">Replace toner</a></td>
+                        <td><a href="#/ticket/11433"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>            
+        </div>
 
     </div>
 </div>
